@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-ih(kg2w40+#)x5jw$gw-gzc!qsxzfm1!ef=bo45ivi2i$959dg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://localhost:3000/', 'http://localhost:3000']
+ALLOWED_HOSTS = ['http://localhost:3000/', 'http://localhost:3000', 'localhost:8000', 'http://localhost:8000/', 'http://localhost:8000', '*']
 
 
 # Application definition
@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "products",
+    "rest_framework",
     "rest_framework_simplejwt",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
