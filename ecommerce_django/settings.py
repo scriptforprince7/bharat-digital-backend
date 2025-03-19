@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-ih(kg2w40+#)x5jw$gw-gzc!qsxzfm1!ef=bo45ivi2i$959dg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://localhost:3000/', 'http://localhost:3000', 'http://localhost:5000/', 'http://localhost:5000', '*']
+ALLOWED_HOSTS = ['http://localhost:3000/', 'http://localhost:3000', 'http://localhost:5000/', 'http://localhost:5000', '*', 'https://bharat-digital-backend.onrender.com']
 
 
 # Application definition
@@ -137,6 +137,7 @@ SIMPLE_JWT = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "https://bharat-digital-frontend-react.vercel.app",
-    "https://bharat-digital-node-server.onrender.com"
+    "https://bharat-digital-node-server.onrender.com",
+    "https://bharat-digital-backend.onrender.com"
 ]
 
