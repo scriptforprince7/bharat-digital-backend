@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.http import HttpResponse
 from rest_framework.routers import DefaultRouter
 from products.views import ProductViewSet
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
@@ -23,9 +24,13 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 router = DefaultRouter()
 router.register(r'products', ProductViewSet, basename='product')
 
+def home_view(request):
+    return HttpResponse("🚀 Server is running smoothly!")
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('', home_view, name='home'), 
 ]
