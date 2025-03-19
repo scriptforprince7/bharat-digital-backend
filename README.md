@@ -102,13 +102,6 @@ Authorization: Bearer <your_token>
 
 ---
 
-## Future Enhancements
-- Implement admin dashboard
-- Extend notification system to SMS
-- Add payment gateway integration
-
----
-
 ## Contributors
 - **Developer:** Prince Sachdeva
 - **Backend:** Django & Node.js
