@@ -130,11 +130,15 @@ REST_FRAMEWORK = {
 }
 
 SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=30),
-    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=7200), 
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=5),
 }
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # React frontend
+    "http://localhost:3000",
+    "https://bharat-digital-frontend-react.vercel.app",
+    "https://bharat-digital-frontend-react.vercel.app/",
+    "https://bharat-digital-node-server.onrender.com/",
+    "https://bharat-digital-node-server.onrender.com"
 ]
 
