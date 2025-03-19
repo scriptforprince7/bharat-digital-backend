@@ -137,8 +137,6 @@ SIMPLE_JWT = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "https://bharat-digital-frontend-react.vercel.app",
-    "https://bharat-digital-frontend-react.vercel.app/",
-    "https://bharat-digital-node-server.onrender.com/",
     "https://bharat-digital-node-server.onrender.com"
 ]
 
