@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-ih(kg2w40+#)x5jw$gw-gzc!qsxzfm1!ef=bo45ivi2i$959dg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://localhost:3000/', 'http://localhost:3000', 'localhost:8000', 'http://localhost:8000/', 'http://localhost:8000', '*']
+ALLOWED_HOSTS = ['http://localhost:3000/', 'http://localhost:3000', 'http://localhost:5000/', 'http://localhost:5000', '*']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.auth",
     "products",
     "rest_framework",
+    "corsheaders",
     "rest_framework_simplejwt",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
@@ -47,6 +48,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -131,4 +133,8 @@ SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=30),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
 }
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # React frontend
+]
 
