@@ -99,7 +99,8 @@ Use the token in the `Authorization` header:
 ```
 Authorization: Bearer <your_token>
 ```
-
+## Postman API Documentation
+- **Test Here:** https://documenter.getpostman.com/view/30974749/2sAYkEpzT6
 ---
 
 ## Contributors
